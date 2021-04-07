@@ -1,0 +1,8 @@
+title Traditional User's Input Til Output Depiction.
+
+User -> Browser:a)User types in the input field \n b)User clicks the "Save" button
+Browser -> Server:The browser sends user's input to the server. \n Server's address: new_note. \n Request: HTTP POST: https://studies.cs.helsinki.fi/exampleapp/new_note \n After the form is submitted, it causes 6 HTTP requests in total. \n The requests are:\n 1) new_note: POST https://studies.cs.helsinki.fi/exampleapp/new_note \n 2) notes: https://studies.cs.helsinki.fi/exampleapp/notes \n 3)main.css: https://studies.cs.helsinki.fi/exampleapp/main.css \n4) main.js: https://studies.cs.helsinki.fi/exampleapp/main.js  \n5) data.json: https://studies.cs.helsinki.fi/exampleapp/data.json \n 6) favicon.ico: https://studies.cs.helsinki.fi/favicon.ico
+Server -> Browser: Server responds to the browser with HTTP status code 302 \n which is a URL redirect asking the browser to do a new HTTP GET request at: \n https://studies.cs.helsinki.fi/exampleapp/notes
+Browser -> Server: Browser reloads the notes page: https://studies.cs.helsinki.fi/exampleapp/notes, which causes 4 more HTTP requests reloads \n The requests at this point are: \n1)main.css: https://studies.cs.helsinki.fi/exampleapp/main.css \n2) main.js: https://studies.cs.helsinki.fi/exampleapp/main.js  \n3) data.json: https://studies.cs.helsinki.fi/exampleapp/data.json \n 4) favicon.ico: https://studies.cs.helsinki.fi/favicon.ico.
+Server -> Browser: Server returns html code, main.css, main.js, data.json & favicon.ico. \n The browser fetches the data, executes present event handlers, and \n eventually renders the notes to the page using DOM-API. 
+Browser -> User: The user gets to see his \ninput as output on the browser.

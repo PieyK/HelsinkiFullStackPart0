@@ -1,0 +1,4 @@
+title Single Page Application(SPA) At a Glance.
+
+Browser -> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server -> Browser : The form in the page doesn't have *action* or *method* attributes\n which are the default methods of sending data to the server.\nThe attributes causes the page to load severally with every http request.\n \n Server therefore sends only one HTML page containing *main.css, *spa.js, \n*data.json & *favicon.ico loaded only once.\n \nThe javascript file isn't named as main but spa.

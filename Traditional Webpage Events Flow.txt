@@ -1,0 +1,14 @@
+
+Browser ----> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server -----> Browser: HTML  
+Browser -----> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server -----> Browser: main.css
+Browser -----> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server -----> Browser: main.js
+Browser -----> Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server -----> Browser: JSON [{content: "hllo", date:"2021-04-06T05:10:24.863Z"},....]
+Browser -----> Server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+Server -----> Browser: HTML
+
+
+

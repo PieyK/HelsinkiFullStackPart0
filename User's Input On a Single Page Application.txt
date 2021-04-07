@@ -1,0 +1,6 @@
+title User's Input On a Single Page Application
+
+User->Browser: User enters a note and clicks save.
+Browser -> Server: Browser sends ONLY one request to the server:\nPOST https://studies.cs.helsinki.fi/exampleapp/new_note_spa.\n Server's address being - new_note_spa.\n \nThe status code: "201 created" is not a redirect which \nmeans no more HTTP requests made. \n\nThe request contains JSON which tells the server to return \nthe data in JSON format. Data here being *content* & *date*.\nResponse also being JSON: message:"note created".\n\nThe data is neither sent using "action" or "method" attributes,\n which is default method for sending data to the server, \nbut rather using the Javascript code fetched from the server.
+Server -> Browser: Returns the note created. Data is returned as stringified \nJSON and rendered on the browser.
+Browser -> User: User gets to see the data they entered on the browser.
